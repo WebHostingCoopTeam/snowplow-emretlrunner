@@ -1,0 +1,4 @@
+emr:
+  restart: always
+  image: webhostingcoopteam/snowplow-emretlrunner
+  envfile: env
