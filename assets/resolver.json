@@ -1,0 +1,28 @@
+{
+  "schema": "iglu:com.snowplowanalytics.iglu/resolver-config/jsonschema/1-0-1",
+  "data": {
+    "cacheSize": 1000,
+    "repositories": [
+      {
+        "name": "Iglu Central",
+        "priority": 0,
+        "vendorPrefixes": [ "com.snowplowanalytics" ],
+        "connection": {
+          "http": {
+            "uri": "http://iglucentral.com"
+          }
+        }
+      },
+      {
+        "name": "Traqqy Iglu Repo (HTTP)",
+        "priority": 5,
+        "vendorPrefixes": [ "com.traqqy" ],
+        "connection": {
+          "http": {
+            "uri": "https://traqqy.github.io/iglu/schemas/"
+          }
+        }
+      }
+    ]
+  }
+}
