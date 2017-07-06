@@ -7,18 +7,24 @@ main() {
 }
 
 startup() {
+  envsubst \
+  < /assets/resolver.json.template \
+  > /emr/resolver.json
   # no files all redirects and aweseme sauce
   envsubst \
   < /assets/config.yml.template \
   | /emr/snowplow-emr-etl-runner --config - \
   --debug \
   --config - \
-  --resolver /assets/resolver.json \
+  --resolver /emr/resolver.json \
   $EMR_ARGS
 }
 
 altstartup() {
   # useful for debugging
+  envsubst \
+  < /assets/resolver.json.template \
+  > /emr/resolver.json
   envsubst \
   < /assets/config.yml.template \
   > /emr/config.yml
@@ -28,7 +34,7 @@ altstartup() {
   /emr/snowplow-emr-etl-runner \
   --debug \
   --config /emr/config.yml \
-  --resolver /assets/resolver.json \
+  --resolver /emr/resolver.json \
   $EMR_ARGS
 }
 
