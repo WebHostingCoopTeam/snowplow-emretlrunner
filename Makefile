@@ -79,22 +79,6 @@ enter:
 logs:
 	docker logs -f `cat cid`
 
-NAME:
-	@while [ -z "$$NAME" ]; do \
-		read -r -p "Enter the name you wish to associate with this container [NAME]: " NAME; echo "$$NAME">>NAME; cat NAME; \
-	done ;
-
-TAG:
-	@while [ -z "$$TAG" ]; do \
-		read -r -p "Enter the tag you wish to associate with this container [TAG]: " TAG; echo "$$TAG">>TAG; cat TAG; \
-	done ;
-
-assets/config.yml.template: SHELL:=/bin/bash
-assets/config.yml.template:
-	bash assets.sh
-
 env:
 	cp -i emr.env.example env
 
-example-env:
-	./example.sh

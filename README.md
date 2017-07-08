@@ -8,10 +8,6 @@ Snowplow EMRETL runner
 
  Then edit the env file
 
-# Usage
+### Usage
 
 `make pull` and `make run`
-
-# Local build
-
-You can edit `assets/resolver.json` and `make build` and then `make run`
