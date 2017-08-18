@@ -281,6 +281,7 @@ fastemrstartup() {
 emrstartup() {
   echo 'EMRETL RUNNER'
   /emr/snowplow-emr-etl-runner \
+  run \
   $DEBUG_CMD_LINE \
   -c /emr/config.yml \
   -r /emr/resolver.json \
