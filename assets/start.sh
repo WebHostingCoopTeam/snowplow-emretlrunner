@@ -285,7 +285,7 @@ emrstartup() {
   $DEBUG_CMD_LINE \
   -c /emr/config.yml \
   -r /emr/resolver.json \
-  -n /emt/enrichments \
+  -n /emr/enrichments \
   -t /emr/targets \
   $EMR_ARGS
 }
